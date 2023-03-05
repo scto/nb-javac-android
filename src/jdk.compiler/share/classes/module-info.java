@@ -25,7 +25,7 @@
 
 /**
  * Defines the implementation of the
- * {@linkplain javax.tools.ToolProvider#getSystemJavaCompiler system Java compiler}
+ * {@linkplain jdkx.tools.ToolProvider#getSystemJavaCompiler system Java compiler}
  * and its command line equivalent, <em>{@index javac javac tool}</em>.
  *
  * <h2 style="font-family:'DejaVu Sans Mono', monospace; font-style:italic">javac</h2>
@@ -33,8 +33,8 @@
  * <p>
  * This module provides the equivalent of command-line access to <em>javac</em>
  * via the {@link java.util.spi.ToolProvider ToolProvider} and
- * {@link javax.tools.Tool} service provider interfaces (SPIs),
- * and more flexible access via the {@link javax.tools.JavaCompiler JavaCompiler}
+ * {@link jdkx.tools.Tool} service provider interfaces (SPIs),
+ * and more flexible access via the {@link jdkx.tools.JavaCompiler JavaCompiler}
  * SPI.</p>
  *
  * <p> Instances of the tools can be obtained by calling
@@ -43,11 +43,11 @@
  * {@code "javac"}.
  *
  * <p>
- * In addition, instances of {@link javax.tools.JavaCompiler.CompilationTask}
- * obtained from {@linkplain javax.tools.JavaCompiler JavaCompiler} can be
- * downcast to {@link com.sun.source.util.JavacTask JavacTask} for access to
+ * In addition, instances of {@link jdkx.tools.JavaCompiler.CompilationTask}
+ * obtained from {@linkplain jdkx.tools.JavaCompiler JavaCompiler} can be
+ * downcast to {@link openjdk.source.util.JavacTask JavacTask} for access to
  * lower level aspects of <em>javac</em>, such as the
- * {@link com.sun.source.tree Abstract Syntax Tree} (AST).</p>
+ * {@link openjdk.source.tree Abstract Syntax Tree} (AST).</p>
  *
  * <p>This module uses the {@link java.nio.file.spi.FileSystemProvider
  * FileSystemProvider} API to locate file system providers. In particular,
@@ -58,13 +58,13 @@
  * @toolGuide javac
  *
  * @provides java.util.spi.ToolProvider
- * @provides com.sun.tools.javac.platform.PlatformProvider
- * @provides javax.tools.JavaCompiler
- * @provides javax.tools.Tool
+ * @provides openjdk.tools.javac.platform.PlatformProvider
+ * @provides jdkx.tools.JavaCompiler
+ * @provides jdkx.tools.Tool
  *
- * @uses javax.annotation.processing.Processor
- * @uses com.sun.source.util.Plugin
- * @uses com.sun.tools.javac.platform.PlatformProvider
+ * @uses jdkx.annotation.processing.Processor
+ * @uses openjdk.source.util.Plugin
+ * @uses openjdk.tools.javac.platform.PlatformProvider
  *
  * @moduleGraph
  * @since 9
@@ -73,65 +73,65 @@ module jdk.compiler {
     requires transitive java.compiler;
 	requires java.logging;
 
-    exports com.sun.source.doctree;
-    exports com.sun.source.tree;
-    exports com.sun.source.util;
-    exports com.sun.tools.javac;
+    exports openjdk.source.doctree;
+    exports openjdk.source.tree;
+    exports openjdk.source.util;
+    exports openjdk.tools.javac;
 
-    exports com.sun.tools.doclint to
+    exports openjdk.tools.doclint to
         jdk.javadoc;
-    exports com.sun.tools.javac.api to
+    exports openjdk.tools.javac.api to
         jdk.javadoc,
         jdk.jshell,
 		java.compiler;
-    exports com.sun.tools.javac.resources to
+    exports openjdk.tools.javac.resources to
         jdk.jshell;
-    exports com.sun.tools.javac.code to
+    exports openjdk.tools.javac.code to
         jdk.javadoc,
         jdk.jshell;
-    exports com.sun.tools.javac.comp to
+    exports openjdk.tools.javac.comp to
         jdk.javadoc,
         jdk.jshell;
-    exports com.sun.tools.javac.file to
+    exports openjdk.tools.javac.file to
         jdk.jdeps,
         jdk.javadoc;
-    exports com.sun.tools.javac.jvm to
+    exports openjdk.tools.javac.jvm to
         jdk.javadoc;
-    exports com.sun.tools.javac.main to
+    exports openjdk.tools.javac.main to
         jdk.javadoc,
         jdk.jshell;
-    exports com.sun.tools.javac.model to
+    exports openjdk.tools.javac.model to
         jdk.javadoc;
-    exports com.sun.tools.javac.parser to
+    exports openjdk.tools.javac.parser to
         jdk.jshell;
-    exports com.sun.tools.javac.platform to
+    exports openjdk.tools.javac.platform to
         jdk.jdeps,
         jdk.javadoc;
-    exports com.sun.tools.javac.tree to
+    exports openjdk.tools.javac.tree to
         jdk.javadoc,
         jdk.jshell;
-    exports com.sun.tools.javac.util to
+    exports openjdk.tools.javac.util to
         jdk.jdeps,
         jdk.javadoc,
         jdk.jshell;
     exports jdk.internal.shellsupport.doc to
         jdk.jshell;
 
-    uses javax.annotation.processing.Processor;
-    uses com.sun.source.util.Plugin;
-    uses com.sun.tools.doclint.DocLint;
-    uses com.sun.tools.javac.platform.PlatformProvider;
+    uses jdkx.annotation.processing.Processor;
+    uses openjdk.source.util.Plugin;
+    uses openjdk.tools.doclint.DocLint;
+    uses openjdk.tools.javac.platform.PlatformProvider;
 
     //provides java.util.spi.ToolProvider with
-        //com.sun.tools.javac.main.JavacToolProvider;
+        //openjdk.tools.javac.main.JavacToolProvider;
 
-    provides com.sun.tools.javac.platform.PlatformProvider with
-        com.sun.tools.javac.platform.JDKPlatformProvider;
+    provides openjdk.tools.javac.platform.PlatformProvider with
+        openjdk.tools.javac.platform.JDKPlatformProvider;
 
-    provides javax.tools.JavaCompiler with
-        com.sun.tools.javac.api.JavacTool;
+    provides jdkx.tools.JavaCompiler with
+        openjdk.tools.javac.api.JavacTool;
 
-    provides javax.tools.Tool with
-        com.sun.tools.javac.api.JavacTool;
+    provides jdkx.tools.Tool with
+        openjdk.tools.javac.api.JavacTool;
 }
 

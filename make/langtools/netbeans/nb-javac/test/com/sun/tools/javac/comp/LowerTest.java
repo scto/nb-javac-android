@@ -22,11 +22,11 @@
  * CA 95054 USA or visit www.sun.com if you need additional information or
  * have any questions.
  */
-package com.sun.tools.javac.comp;
+package openjdk.tools.javac.comp;
 
-import com.sun.tools.classfile.ClassFile;
-import com.sun.tools.classfile.Method;
-import com.sun.tools.javac.api.JavacTaskImpl;
+import openjdk.tools.classfile.ClassFile;
+import openjdk.tools.classfile.Method;
+import openjdk.tools.javac.api.JavacTaskImpl;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -37,15 +37,15 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
-import javax.tools.FileObject;
-import javax.tools.ForwardingJavaFileManager;
-import javax.tools.JavaCompiler;
-import javax.tools.JavaFileManager.Location;
-import javax.tools.JavaFileObject;
-import javax.tools.JavaFileObject.Kind;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.StandardJavaFileManager;
-import javax.tools.ToolProvider;
+import jdkx.tools.FileObject;
+import jdkx.tools.ForwardingJavaFileManager;
+import jdkx.tools.JavaCompiler;
+import jdkx.tools.JavaFileManager.Location;
+import jdkx.tools.JavaFileObject;
+import jdkx.tools.JavaFileObject.Kind;
+import jdkx.tools.SimpleJavaFileObject;
+import jdkx.tools.StandardJavaFileManager;
+import jdkx.tools.ToolProvider;
 import junit.framework.TestCase;
 
 /**

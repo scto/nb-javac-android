@@ -23,30 +23,30 @@
  * have any questions.
  */
 
-package com.sun.source.util;
+package openjdk.source.util;
 
-import com.sun.source.tree.CompilationUnitTree;
-import com.sun.source.tree.IdentifierTree;
-import com.sun.source.tree.MemberReferenceTree;
-import com.sun.source.tree.MethodTree;
-import com.sun.source.tree.Scope;
-import com.sun.source.tree.Tree;
-import com.sun.source.tree.Tree.Kind;
-import com.sun.source.tree.TypeParameterTree;
-import com.sun.source.tree.VariableTree;
-import com.sun.tools.javac.api.JavacTrees;
+import openjdk.source.tree.CompilationUnitTree;
+import openjdk.source.tree.IdentifierTree;
+import openjdk.source.tree.MemberReferenceTree;
+import openjdk.source.tree.MethodTree;
+import openjdk.source.tree.Scope;
+import openjdk.source.tree.Tree;
+import openjdk.source.tree.Tree.Kind;
+import openjdk.source.tree.TypeParameterTree;
+import openjdk.source.tree.VariableTree;
+import openjdk.tools.javac.api.JavacTrees;
 import java.io.IOException;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
-import javax.lang.model.element.Element;
-import javax.lang.model.element.ElementKind;
-import javax.lang.model.element.TypeElement;
-import javax.tools.JavaCompiler;
-import javax.tools.JavaFileObject;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.ToolProvider;
+import jdkx.lang.model.element.Element;
+import jdkx.lang.model.element.ElementKind;
+import jdkx.lang.model.element.TypeElement;
+import jdkx.tools.JavaCompiler;
+import jdkx.tools.JavaFileObject;
+import jdkx.tools.SimpleJavaFileObject;
+import jdkx.tools.ToolProvider;
 import junit.framework.TestCase;
 
 /**
@@ -100,7 +100,7 @@ public class TreesTest extends TestCase {
         CompilationUnitTree cut = ct.parse().iterator().next();
         TreePath tp = new TreePath(new TreePath(cut), cut.getTypeDecls().get(0));
         Scope s = Trees.instance(ct).getScope(tp);
-        TypeElement type = ct.getElements().getTypeElement("com.sun.java.util.jar.pack.Package.File");
+        TypeElement type = ct.getElements().getTypeElement("openjdk.java.util.jar.pack.Package.File");
 
         assertFalse(Trees.instance(ct).isAccessible(s, type));
     }

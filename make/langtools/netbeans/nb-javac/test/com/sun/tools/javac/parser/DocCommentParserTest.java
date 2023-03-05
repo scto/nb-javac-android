@@ -1,23 +1,23 @@
-package com.sun.tools.javac.parser;
+package openjdk.tools.javac.parser;
 
-import com.sun.source.doctree.DocCommentTree;
-import com.sun.source.doctree.DocTree;
-import com.sun.source.tree.ClassTree;
-import com.sun.source.tree.CompilationUnitTree;
-import com.sun.source.util.DocSourcePositions;
-import com.sun.source.util.DocTreeScanner;
-import com.sun.source.util.DocTrees;
-import com.sun.source.util.TreePath;
-import com.sun.tools.javac.api.JavacTaskImpl;
+import openjdk.source.doctree.DocCommentTree;
+import openjdk.source.doctree.DocTree;
+import openjdk.source.tree.ClassTree;
+import openjdk.source.tree.CompilationUnitTree;
+import openjdk.source.util.DocSourcePositions;
+import openjdk.source.util.DocTreeScanner;
+import openjdk.source.util.DocTrees;
+import openjdk.source.util.TreePath;
+import openjdk.tools.javac.api.JavacTaskImpl;
 import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import javax.tools.JavaCompiler;
-import javax.tools.JavaFileObject;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.ToolProvider;
+import jdkx.tools.JavaCompiler;
+import jdkx.tools.JavaFileObject;
+import jdkx.tools.SimpleJavaFileObject;
+import jdkx.tools.ToolProvider;
 import junit.framework.TestCase;
 import org.junit.Ignore;
 

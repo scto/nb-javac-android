@@ -25,9 +25,9 @@
 
 package global;
 
-import com.sun.tools.javac.api.JavacTaskImpl;
-import com.sun.tools.javap.DisassemblerTool.DisassemblerTask;
-import com.sun.tools.javap.JavapTask;
+import openjdk.tools.javac.api.JavacTaskImpl;
+import openjdk.tools.javap.DisassemblerTool.DisassemblerTask;
+import openjdk.tools.javap.JavapTask;
 import global.ap1.AP;
 import java.io.File;
 import java.io.IOException;
@@ -41,12 +41,12 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import javax.lang.model.element.Element;
-import javax.lang.model.element.TypeElement;
-import javax.lang.model.util.ElementFilter;
-import javax.tools.*;
-import javax.tools.JavaFileManager.Location;
-import javax.tools.JavaFileObject.Kind;
+import jdkx.lang.model.element.Element;
+import jdkx.lang.model.element.TypeElement;
+import jdkx.lang.model.util.ElementFilter;
+import jdkx.tools.*;
+import jdkx.tools.JavaFileManager.Location;
+import jdkx.tools.JavaFileObject.Kind;
 import junit.framework.TestCase;
 
 /**
@@ -523,7 +523,7 @@ public class ErrorToleranceTest extends TestCase {
             compilerOptions.addAll(Arrays.asList("-classpath", myself.toExternalForm(), "-processor", AP.class.getName(), "-s", sourceOutput.getAbsolutePath()));
         }
         JavacTaskImpl ct = (JavacTaskImpl)tool.getTask(null, mjfm, null, compilerOptions, null, Arrays.asList(new MyFileObject(code)));
-        com.sun.tools.javac.main.JavaCompiler.instance(ct.getContext()).doRepair = repair;
+        openjdk.tools.javac.main.JavaCompiler.instance(ct.getContext()).doRepair = repair;
         ct.parse();
         Iterable<? extends Element> analyze = ct.analyze();
         

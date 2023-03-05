@@ -22,19 +22,19 @@
  * CA 95054 USA or visit www.sun.com if you need additional information or
  * have any questions.
  */
-package com.sun.tools.javac.code;
+package openjdk.tools.javac.code;
 
-import com.sun.source.util.JavacTask;
+import openjdk.source.util.JavacTask;
 import java.io.IOException;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
-import javax.tools.Diagnostic;
-import javax.tools.DiagnosticListener;
-import javax.tools.JavaCompiler;
-import javax.tools.JavaFileObject;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.ToolProvider;
+import jdkx.tools.Diagnostic;
+import jdkx.tools.DiagnosticListener;
+import jdkx.tools.JavaCompiler;
+import jdkx.tools.JavaFileObject;
+import jdkx.tools.SimpleJavaFileObject;
+import jdkx.tools.ToolProvider;
 import junit.framework.TestCase;
 
 /**

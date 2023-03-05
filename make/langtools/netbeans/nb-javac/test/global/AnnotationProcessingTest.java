@@ -25,9 +25,9 @@
 
 package global;
 
-import com.sun.source.util.JavacTask;
-import com.sun.tools.javac.Main;
-import com.sun.tools.javac.api.JavacTaskImpl;
+import openjdk.source.util.JavacTask;
+import openjdk.tools.javac.Main;
+import openjdk.tools.javac.api.JavacTaskImpl;
 import global.ap1.AP;
 import global.ap1.ClassBasedAP;
 import global.ap1.ErrorProducingAP;
@@ -41,14 +41,14 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
-import javax.lang.model.element.Element;
-import javax.lang.model.element.TypeElement;
-import javax.tools.Diagnostic;
-import javax.tools.DiagnosticCollector;
-import javax.tools.JavaCompiler;
-import javax.tools.JavaFileObject;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.ToolProvider;
+import jdkx.lang.model.element.Element;
+import jdkx.lang.model.element.TypeElement;
+import jdkx.tools.Diagnostic;
+import jdkx.tools.DiagnosticCollector;
+import jdkx.tools.JavaCompiler;
+import jdkx.tools.JavaFileObject;
+import jdkx.tools.SimpleJavaFileObject;
+import jdkx.tools.ToolProvider;
 import junit.framework.TestCase;
 import org.junit.Ignore;
 

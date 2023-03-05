@@ -25,29 +25,29 @@
 
 package global;
 
-import com.sun.source.tree.CompilationUnitTree;
-import com.sun.source.tree.IdentifierTree;
-import com.sun.source.tree.VariableTree;
-import com.sun.source.util.JavacTask;
-import com.sun.source.util.TreePath;
-import com.sun.source.util.TreePathScanner;
-import com.sun.source.util.Trees;
-import com.sun.tools.javac.code.Scope;
-import com.sun.tools.javac.code.Symbol;
-import com.sun.tools.javac.code.Type;
+import openjdk.source.tree.CompilationUnitTree;
+import openjdk.source.tree.IdentifierTree;
+import openjdk.source.tree.VariableTree;
+import openjdk.source.util.JavacTask;
+import openjdk.source.util.TreePath;
+import openjdk.source.util.TreePathScanner;
+import openjdk.source.util.Trees;
+import openjdk.tools.javac.code.Scope;
+import openjdk.tools.javac.code.Symbol;
+import openjdk.tools.javac.code.Type;
 import java.io.IOException;
 import java.net.URI;
 import java.util.Arrays;
-import javax.lang.model.element.Element;
-import javax.lang.model.element.TypeElement;
-import javax.lang.model.element.VariableElement;
-import javax.lang.model.type.TypeKind;
-import javax.lang.model.type.TypeMirror;
-import javax.lang.model.util.ElementFilter;
-import javax.tools.JavaCompiler;
-import javax.tools.JavaFileObject;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.ToolProvider;
+import jdkx.lang.model.element.Element;
+import jdkx.lang.model.element.TypeElement;
+import jdkx.lang.model.element.VariableElement;
+import jdkx.lang.model.type.TypeKind;
+import jdkx.lang.model.type.TypeMirror;
+import jdkx.lang.model.util.ElementFilter;
+import jdkx.tools.JavaCompiler;
+import jdkx.tools.JavaFileObject;
+import jdkx.tools.SimpleJavaFileObject;
+import jdkx.tools.ToolProvider;
 import junit.framework.TestCase;
 
 public class ScopeTest extends TestCase {

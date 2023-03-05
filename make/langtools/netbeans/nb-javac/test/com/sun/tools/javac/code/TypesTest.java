@@ -23,26 +23,26 @@
  * have any questions.
  */
 
-package com.sun.tools.javac.code;
+package openjdk.tools.javac.code;
 
-import com.sun.source.tree.ClassTree;
-import com.sun.source.tree.CompilationUnitTree;
-import com.sun.source.tree.Tree;
-import com.sun.source.util.JavacTask;
-import com.sun.source.util.TreePath;
-import com.sun.source.util.TreePathScanner;
-import com.sun.tools.javac.code.Type.ClassType;
+import openjdk.source.tree.ClassTree;
+import openjdk.source.tree.CompilationUnitTree;
+import openjdk.source.tree.Tree;
+import openjdk.source.util.JavacTask;
+import openjdk.source.util.TreePath;
+import openjdk.source.util.TreePathScanner;
+import openjdk.tools.javac.code.Type.ClassType;
 import java.io.IOException;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.LinkedList;
-import javax.lang.model.type.DeclaredType;
-import javax.lang.model.type.TypeMirror;
-import javax.lang.model.util.Types;
-import javax.tools.JavaCompiler;
-import javax.tools.JavaFileObject;
-import javax.tools.SimpleJavaFileObject;
-import javax.tools.ToolProvider;
+import jdkx.lang.model.type.DeclaredType;
+import jdkx.lang.model.type.TypeMirror;
+import jdkx.lang.model.util.Types;
+import jdkx.tools.JavaCompiler;
+import jdkx.tools.JavaFileObject;
+import jdkx.tools.SimpleJavaFileObject;
+import jdkx.tools.ToolProvider;
 import junit.framework.TestCase;
 
 /**
